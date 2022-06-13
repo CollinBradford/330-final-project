@@ -13,7 +13,7 @@ k = [1,2,2];
 
 % multiplies the timestep by this value so that we can use the wgn
 % generator to get white noise. The multiplication is needed so that the
-% timestep can be canged into an int which allows accessing the array. 
+% timestep can be changed into an int which allows accessing the array. 
 global tfactor;
 tfactor = 1e4;
 
