@@ -8,8 +8,8 @@ runName = "run-one";
 global m;
 global k;
 global forcingFunction;
-m = [1,2,3];
-k = [1,2,2];
+m = [1,1,1];
+k = [1,1,1];
 
 % multiplies the timestep by this value so that we can use the wgn
 % generator to get white noise. The multiplication is needed so that the
