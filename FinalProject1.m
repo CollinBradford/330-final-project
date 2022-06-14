@@ -15,7 +15,7 @@ k = [1,2,2];
 % generator to get white noise. The multiplication is needed so that the
 % timestep can be changed into an int which allows accessing the array. 
 global tfactor;
-tfactor = 1e4;
+tfactor = 1e1;
 
 % time info
 tinit = 1;
@@ -38,7 +38,7 @@ u=transpose(u);
 numMasses = size(u);
 numMasses = numMasses(1)/2;
 xvals = zeros(numMasses,length(u(1,:)));
-for i=1:2:numMasses
+for i=1:2:numMasses*2
     xvals(ceil(i/2),:) = u(i,:);
 end
 
