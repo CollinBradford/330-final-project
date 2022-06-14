@@ -8,19 +8,19 @@ runName = "run-one";
 global m;
 global k;
 global forcingFunction;
-m = [1,1,1];
-k = [1,1,1];
+m = [1,2,1];
+k = [1,1,3];
 
 % multiplies the timestep by this value so that we can use the wgn
 % generator to get white noise. The multiplication is needed so that the
 % timestep can be changed into an int which allows accessing the array. 
 global tfactor;
-tfactor = 1e1;
+tfactor = 1e4;
 
 % time info
 tinit = 1;
 tfinal = 1000;
-timestep = 0.001;
+timestep = 0.0001;
 
 forcingFunction = wgn(tfinal*tfactor,1,10);
 
@@ -110,6 +110,7 @@ ylabel("power")
 for i=1:numMasses
     figure()
     semilogy(wMasses,powerMasses(i,:));
+    xlim([3136,3139])
     title("Power Spectrum Mass " + int2str(i))
     xlabel("angular frequency")
     ylabel("power")
