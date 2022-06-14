@@ -50,8 +50,8 @@ dw=2*pi/(N*tau);
 winit = 0:dw:2*pi/tau-dw;
 
 N=2^14;
-tau=200/(N-1);
-te=0:tau:200;
+tau=500/(N-1);
+te=0:tau:500;
 
 x2e=interp1(t,x2,te,'spline');
 x3e=interp1(t,x3,te,'spline');
@@ -66,7 +66,7 @@ P3=abs(f3).^2;
 P4=abs(f4).^2;
 
 dw=2*pi/(N*tau);
-w=0:dw:2*pi/tau-dw;
+w = -(N/2)*dw:dw:dw*(N/2-1)
 
 figure
 semilogy(w,P2)
